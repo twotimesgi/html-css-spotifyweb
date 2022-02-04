@@ -7,19 +7,30 @@
     padding: 0px;
 }
 
-body{
-    background-color: #141921;
+html{
+    font-size: 9pt; 
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    background-color: #141921;
+    color: white;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
 header{
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: flex-end;
     padding: 1rem 0; 
     position: fixed;
     width: 100%;
-    min-height: 5rem;
+    min-height: 5em;
 }
 
 .btn{
@@ -27,19 +38,21 @@ header{
     border-radius: 50px;
     border: 1px solid white;
     color: white;
-    padding: 0.5rem 2rem;
+    padding: 0.6em 2em;
     margin-right: 5px;
     text-transform: uppercase;
+    font-size: 1rem;
+    font-family: inherit;
+
 }
 
 aside{
     background-color: black;
     height: 100vh;
     left: 0;
-    min-width: 40px;
+    min-width: 3em;
     position: fixed;
     top: 0;
-    width: 8%;
 }
 
 footer{
@@ -50,10 +63,60 @@ footer{
     min-height: 4rem;
     position: fixed;
     width: 100%;
+    align-items: flex-start;
 }
 
 .wrapper{
+    height: 100vh;
     display: flex;
-    height: calc(100vh - 9rem);
+    padding: 6em 1em 5em 5em;
     overflow-y: auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.wrapper__menu{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+
+.wrapper__menu-item{
+    color: rgba(255, 255, 255, 0.5); 
+    text-transform: uppercase;
+}
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.8em
+}
+
+.section__title{
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+.item{
+    flex-basis: calc(50% - 0.8em);
+}
+
+.item__cover{
+    width: 100%;
+}
+
+.item__title, .item__author{
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: 0.5em;
+}
+
+.item__author{
+    opacity: 0.5;
 }
