@@ -9,7 +9,7 @@
 
 html{
     font-size: 9pt; 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body{
@@ -81,7 +81,6 @@ footer{
     flex-wrap: wrap;
     justify-content: center;
     gap: 2em;
-    margin-bottom: 3em;
 }
 
 .wrapper__menu-item{
@@ -93,13 +92,25 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 0.8em
+    gap: 0.8em;
+    margin-top: 3em;
+    align-items: flex-start;
 }
 
 .section__title{
     width: 100%;
     font-size: 2rem;
-    margin-bottom: 1em;
+}
+
+.section__title--mbottom{
+    margin-bottom: 0.8em;
+}
+
+.section__subtitle{
+    opacity: 0.5;
+    font-weight: normal;
+    margin-bottom: 1.8em;
+    width: 100%;
 }
 
 .item{
@@ -117,6 +128,15 @@ footer{
     margin-top: 0.5em;
 }
 
+.item__title{
+    font-size: 1.2rem;
+}
+
 .item__author{
     opacity: 0.5;
+}
+
+.item__cover--circle{
+    border-radius: 100%;
+    over
 }
