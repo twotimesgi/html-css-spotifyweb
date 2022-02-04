@@ -147,12 +147,13 @@ aside{
     display: flex;
 }
 
-.playing, .footer__right{
+.playing, .options{
     flex-basis: 25%;
 }
 
-.footer__center{
+.player{
     flex-basis: 50%;
+    padding: 0 1em; 
 }
 
 .playing .playing__cover{
@@ -199,4 +200,60 @@ aside{
     opacity: .5;
 }
 
+
+.player{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.player__controls{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    gap: 1.5em; 
+}
+
+.player__controls div{
+    width: 2.4rem;
+    height: 2.4rem; 
+    border: 3px solid;
+    border-radius: 100%;
+    position: relative;
+}
+
+.player__controls > div > i{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%,-50%);
+}
+
+.player__status{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.player__progress-bar{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 4px;
+    max-width: 30rem; 
+    border-radius: 1rem;
+}
+
+.player__progress{
+    width: 20%;
+    background-color: white;
+    height: 4px;
+    max-width: 30rem; 
+    border-radius: 1rem;
+}
 
