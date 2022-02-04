@@ -66,7 +66,7 @@ a{
 }
 
 .nav__logo--small{
-    width: 30px;
+    width: 25px;
 }
 
 .nav__logo{
@@ -93,13 +93,13 @@ a{
 .plus{
     width: 2.5rem;
     background-color: rgba(255, 255, 255, 0.8);
-    display: block;
+    display: inline-block;
     color: black;
     text-align: center; 
     height: 2.5rem;
     font-size: 2rem;
     vertical-align: sub;
-    margin-right: 1rem;
+    margin-right: 1rem; 
 }
 
 .nav__title{
@@ -113,7 +113,7 @@ a{
 }
 
 .nav__icon--small{
-    width: 20px;
+    width: 19px;
 }
 
 .nav__item span, .nav__item .hide{
