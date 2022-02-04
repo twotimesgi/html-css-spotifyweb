@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +21,9 @@
 
 <body>
     <header class="header">
-        <img class="nav__logo" src="img/logo.svg">
-        <img class="nav__logo--small" src="img/logo-small.svg">
         <nav clas="nav">
+            <img class="nav__logo" src="img/logo.svg">
+            <img class="nav__logo--small" src="img/logo-small.svg">
             <ul class="nav__list">
                 <li class="nav__item"><img class="nav__icon" src="img/home.svg"><span>Home</span></li>
                 <li class="nav__item"><img class="nav__icon" src="img/search.svg"><span>Cerca</span></li>
@@ -30,7 +31,7 @@
             </ul>
             <h4 class="nav__title">Playlist</h4>
             <ul class="nav__list">
-                <li class="nav__item nav__item--large"><div class="plus">+</div><span>Crea playlist</span></li>
+                <li class="nav__item nav__item--large"><div class="plus hide">+</div><span>Crea playlist</span></li>
                 <li class="nav__item"><span>Nome playlist</span></li>
                 <li class="nav__item"><span>Nome playlist</span></li>
                 <li class="nav__item"><span>Nome playlist</span></li>
@@ -39,6 +40,10 @@
                 <li class="nav__item"><span>Nome playlist</span></li>
             </ul>
         </nav>
+        <ul class="nav__bottom nav__list">
+            <li class="nav__item"><div class="nav__icon nav__icon--small"><img src="img/download.svg"></div><span>Installa app</span></li>
+            <li class="nav__item"><div class="nav__icon nav__profile-pic"> <img src="img/profile.svg"></div><span>Luigi Bardella Gerbi</span></li>
+        </ul>
     </header>
     <main>
         <div class="banner">
@@ -54,7 +59,7 @@
                 <span class="wrapper__menu-item"><a href="">Scopri</a></span>
             </nav>
             <section class="section">
-                <h2 class="section__title section__title--mbottom">Riprodotte di recente</h2>
+                <h2 class="section__title section__title--mbottom">Ascoltate di recente</h2>
                 <div class="item">
                     <img class="item__cover" src="img/metal_lifting.jpg">
                     <h4 class="item__title">Heavy Metal</h4>

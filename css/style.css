@@ -58,13 +58,15 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 2rem;
     font-weight: bold;
+    padding-bottom: 6rem;
+    text-align: center;
 }
 
 .nav__logo--small{
     width: 30px;
-    margin-bottom: 15px; 
 }
 
 .nav__logo{
@@ -75,11 +77,13 @@ a{
 .nav__list{
     list-style: none;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .nav__item{
     margin-bottom: 0.8rem; 
     opacity: 0.5;
+    width: 100%;
 }
 
 .nav__item--large{
@@ -97,6 +101,7 @@ a{
     vertical-align: sub;
     margin-right: 1rem;
 }
+
 .nav__title{
     display: none;
     text-transform: uppercase;
@@ -104,10 +109,36 @@ a{
 .nav__icon{
     width: 25px;
     vertical-align: middle;
+    display: inline-block;
 }
 
-.nav__item span, .nav__item div{
+.nav__icon--small{
+    width: 20px;
+}
+
+.nav__item span, .nav__item .hide{
     display: none;
+}
+
+.nav__profile-pic{
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    display: inline-block;
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 1rem;
+    vertical-align: sub;
+    margin: 0 auto;
+}
+
+.nav__profile-pic img{
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 
 .wrapper{
@@ -353,10 +384,13 @@ a{
         width: 20rem;
         align-items: flex-start;
         padding-left: 2rem;
+        padding-right: 2rem;
+        text-align: left;
     }
 
     .nav__icon{
         margin-right: 1rem;
+        text-align: center;
     }
 
     .nav__logo--small{
@@ -368,7 +402,7 @@ a{
     }
 
     .nav__item span,
-    .nav__item div{
+    .nav__item .hide{
         display: inline-block;
     }
 
@@ -380,6 +414,7 @@ a{
     .wrapper{
         padding-left: 21rem;
     }
+
 }
 
 @media screen and (min-width: 700px) and (max-width: 1100px){
