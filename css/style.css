@@ -22,6 +22,21 @@ a{
     text-decoration: none;
 }
 
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+}
+
 .banner{
     align-items: center;
     background-color: rgba(0, 0, 0, 0.6);
@@ -39,11 +54,10 @@ a{
     border: 1px solid white;
     color: white;
     padding: 0.6em 2em;
-    margin-right: 5px;
+    margin-right: 10px;
     text-transform: uppercase;
     font-size: 1rem;
     font-family: inherit;
-
 }
 
 .header{
@@ -159,7 +173,18 @@ a{
 }
 
 .wrapper__menu-item{
-    color: rgba(255, 255, 255, 0.5); 
+    color: white;
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.wrapper__menu-item:nth-child(1){
+    color: white;
+    opacity: 1;
+}
+
+.wrapper__menu-item button{
     text-transform: uppercase;
 }
 
@@ -337,6 +362,7 @@ a{
 .bar{
     height: 4px;
     border-radius: 1rem;
+    position: relative;
 }
 
 .player__progress-bar{
@@ -360,6 +386,7 @@ a{
         width: 100%;
     }
 }
+
 .options{
     display: flex;
     flex-basis: 20%;
@@ -380,13 +407,57 @@ a{
     min-width: 4em;
     background-color: rgba(255, 255, 255, 0.2);
     margin-left: 5px;
-    
 }
 
 .options__volume-status{
-    width: 10%;
+    width: 60%;
     background-color: white;
 }
+
+@media (hover: hover){
+    .banner__btn:hover {
+        transform: scale(1.1);
+    }
+
+    .player__progress-bar:hover .player__progress::after{
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: rgb(224, 224, 224);
+        position: absolute;
+        right: -6px;
+        top: -4px;
+    }
+
+    .player__progress-bar:hover .player__progress{
+        background-color: #95ffac;
+    }
+
+    .options__volume-bar:hover .options__volume-status{
+        background-color: #95ffac;
+    }
+
+    .options__volume-bar:hover .options__volume-status::after{
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: rgb(224, 224, 224);
+        position: absolute;
+        right: -6px;
+        top: -4px;
+    }
+
+    .play:hover{
+        transform: scale(1.1);
+    }
+
+    .wrapper__menu-item:hover{
+        opacity: 1;
+    }
+}
+
 
 @media screen and (min-width: 600px){
     .header{
