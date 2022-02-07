@@ -35,6 +35,7 @@ button {
     -webkit-font-smoothing: inherit;
     -moz-osx-font-smoothing: inherit;
     -webkit-appearance: none;
+    cursor: pointer;
 }
 
 .banner{
@@ -96,8 +97,11 @@ button {
 
 .nav__item{
     margin-bottom: 0.8rem; 
-    opacity: 0.5;
     width: 100%;
+}
+
+.nav__item button{
+    opacity: 0.5;
 }
 
 .nav__item--large{
@@ -177,11 +181,13 @@ button {
     opacity: 0.5;
     font-weight: bold;
     font-size: 1.1rem;
+    display: block;
 }
 
-.wrapper__menu-item:nth-child(1){
-    color: white;
+.wrapper__menu-item--active{
+    color:white;
     opacity: 1;
+    position: relative;
 }
 
 .wrapper__menu-item button{
@@ -513,6 +519,10 @@ button {
     .playing__info button:hover{
         opacity: 1;
         text-decoration: underline;
+    }
+
+    .nav__item button:hover{
+    opacity: 1;
     }
 }
 
