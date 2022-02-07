@@ -210,14 +210,16 @@ button:not(.banner__btn){
     line-height: 2.5rem;
 }
 
-.wrapper__menu .wrapper__menu-item.active{
+.wrapper__menu .wrapper__menu-item.active::after{
     content: "";
     position: absolute;
     background-color: #95ffac;
-    height: 30px;
-    width: 3px;
-    top: -3px;
-    left: -25px;
+    height: 3px;
+    display: block;
+    width: 35px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .wrapper__menu .wrapper__menu-item button.active{
