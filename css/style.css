@@ -529,7 +529,7 @@ button:not(.banner__btn){
         top: -4px;
     }
 
-    .play:hover{
+    .player__play:hover{
         transform: scale(1.1);
     }
 
@@ -618,7 +618,7 @@ button:not(.banner__btn){
     }
 }
 
-@media screen and (min-width: 700px) and (max-width: 800px){
+@media screen and (min-width: 700px) and (max-width: 900px){
     .item{
         flex-basis: calc(100% / 3 - 0.8em);
     }
