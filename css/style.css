@@ -184,10 +184,14 @@ button {
     display: block;
 }
 
-.wrapper__menu-item--active{
+.nav .active{
     color:white;
     opacity: 1;
-    position: relative;
+}
+
+.wrapper__menu .active{
+    color:white;
+    opacity: 1;
 }
 
 .wrapper__menu-item button{
@@ -201,6 +205,7 @@ button {
     gap: 0.8em;
     margin-top: 3em;
     align-items: flex-start;
+    width: 100%;
 }
 
 .section__title{
@@ -226,6 +231,38 @@ button {
 .item__cover{
     width: 100%;
 }
+
+.item__img{
+    position: relative;
+}
+
+.item__overlay{
+    position:absolute;
+    inset: 0;
+    background-color:  rgba(0,0,0,0.5);
+    display: none;
+}
+
+.item__play{
+    width: 5rem;
+    height: 5rem; 
+    border: 7px solid;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+.item__play .fa-play{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-55%,-50%);
+    font-size: 25pt;
+}
+
 
 .item__title, .item__author{
     width: 100%;
@@ -343,7 +380,7 @@ button {
     gap: 1.5em; 
 }
 
-.player__controls div{
+.player__play{
     width: 2.4rem;
     height: 2.4rem; 
     border: 3px solid;
@@ -464,6 +501,10 @@ button {
     .wrapper__menu-item:hover{
         opacity: 1;
     }
+
+    .item:hover .item__play, .item:hover .item__overlay{
+        display: block;
+    }
 }
 
 
@@ -532,7 +573,7 @@ button {
     }
 }
 
-@media screen and (min-width: 1100px){
+@media screen and (min-width: 1101px){
     .item{
         flex-basis: calc(100% / 6 - 0.8em);
     }
