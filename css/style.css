@@ -96,14 +96,11 @@ button:not(.banner__btn){
     flex-direction: column;
     min-height: 0;
 }
-  
-.nav__content {
-
-}
 
 .nav li{
- line-height: 2.5rem;
- font-weight: bold;
+ line-height: 3rem;
+ font-weight: bold; 
+ position: relative;
 }
 
 .nav__section--flexend{
@@ -121,7 +118,21 @@ button:not(.banner__btn){
 
 .nav__icon{
     width: 25px;
-    vertical-align:-50%;    
+    vertical-align:-50%;
+    margin-right: 10px;
+}
+
+.nav__icon--square{
+    width: 3rem;
+    margin-right: 10px;
+    height: 3rem;
+    background-color: white;
+    display: inline-block;
+    vertical-align: -15%; 
+    color: black;
+    font-size: 25pt;
+    text-align: center;
+    line-height: 2.8rem;
 }
 
 .nav__logo{
@@ -169,10 +180,24 @@ button:not(.banner__btn){
 }
 
 .wrapper__menu .wrapper__menu-item button.active{
-    color:white;
     opacity: 1;
 }
 
+.nav ul li.active::after{
+    content: "";
+    position: absolute;
+    background-color: #95ffac;
+    height: 3rem;
+    display: block;
+    width: 4px;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+}
+
+.nav ul li button.active{
+    opacity: 1;
+}
 
 .wrapper__menu-item button{
     text-transform: uppercase;
