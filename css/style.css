@@ -15,14 +15,15 @@ html{
 body{
     background-color: #141921;
     color: white;
-}
+} 
 
 a{
     color: inherit;
     text-decoration: none;
 }
 
-button:not(.banner__btn){
+/* Reset stile bottoni */
+button{
     border: none;
     margin: 0;
     padding: 0;
@@ -36,6 +37,11 @@ button:not(.banner__btn){
     -moz-osx-font-smoothing: inherit;
     -webkit-appearance: none;
     cursor: pointer;
+    font-family: inherit;
+}
+
+/* Tutti i bottoni hanno opacity 0.5 tranne quello nell'header */
+button:not(.banner__btn){
     opacity: 0.5;
 }
 
@@ -48,10 +54,10 @@ button:not(.banner__btn){
     position: fixed;
     width: 100%;
     min-height: 5em;
+    z-index: 99;
 }
 
 .banner__btn{
-    background: transparent;
     border-radius: 50px;
     border: 1px solid white;
     color: white;
@@ -59,7 +65,6 @@ button:not(.banner__btn){
     margin-right: 10px;
     text-transform: uppercase;
     font-size: 1rem;
-    font-family: inherit;
 }
 
 .header{
@@ -70,7 +75,6 @@ button:not(.banner__btn){
     position: fixed;
     top: 0;
     padding-top: 1em; 
-    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,12 +83,15 @@ button:not(.banner__btn){
     font-weight: bold;
     padding-bottom: 6rem;
     text-align: center;
+    z-index: 100;
 }
 
+/* Logo senza scritta */
 .nav__logo--small{
     width: 25px;
 }
 
+/* Logo con scritta */
 .nav__logo{
     display: none;
     width: 130px;
@@ -103,16 +110,13 @@ button:not(.banner__btn){
     position: relative;
 }
 
-
-.nav__item button{
-    opacity: 0.5;
-}
+/* Modifiers per icona e testo Crea playlist */
 
 .nav__item--large{
     line-height: 2.5rem;
 }
 
-.plus{
+.nav__item--plus{
     width: 2.5rem;
     background-color: rgba(255, 255, 255, 0.8);
     display: inline-block;
@@ -134,10 +138,12 @@ button:not(.banner__btn){
     display: inline-block;
 }
 
+/* Modifier per icona download */
 .nav__item .nav__icon--small{
     width: 13px;
 }
 
+/* Nasconde testo vicino alle icone*/
 .nav__item .hide{
     display: none;
 }
@@ -188,7 +194,6 @@ button:not(.banner__btn){
 }
 
 .nav button.active{
-    color:white;
     opacity: 1;
 }
 
@@ -202,6 +207,7 @@ button:not(.banner__btn){
     left: -25px;
 }
 
+/* Nasconde il sottomenù playlist dal nav */
 .playlist-menu{
     display: none;
 }
@@ -247,6 +253,7 @@ button:not(.banner__btn){
     font-size: 2rem;
 }
 
+/* Aggiunge il margine quando non c'è .section__subtitle */
 .section__title--mbottom{
     margin-bottom: 0.8em;
 }
@@ -313,6 +320,7 @@ button:not(.banner__btn){
     opacity: 0.5;
 }
 
+/* Modifier copertina cerchio*/
 .item__cover--circle{
     border-radius: 100%;
 }
@@ -328,7 +336,7 @@ button:not(.banner__btn){
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 101;
     padding-right: 10px;
 }
 
@@ -494,6 +502,7 @@ button:not(.banner__btn){
     background-color: white;
 }
 
+/* Aggiungo effetti hover solo se supportati */
 @media (hover: hover){
     .banner__btn:hover {
         transform: scale(1.1);
