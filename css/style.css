@@ -186,57 +186,6 @@ button:not(.banner__btn){
     display: none;
 }
 
-
-@media screen and (min-width: 600px){
-    .wrapper{
-        padding-left: 21rem;
-    }
-
-    .mright10{
-        margin-right: 10px;
-    }
-
-    .playing__actions button:hover{
-        opacity: 1;
-    }
-
-    .playing__info button:hover{
-        opacity: 1;
-        text-decoration: underline;
-    }
-
-    .nav{
-        width: 240px;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    .nav li{
-        text-align: left;
-    }
-
-    .nav__logo-small{
-        display: none;
-    }
-
-    .nav__logo{
-        display: block;
-    }
-
-    .nav__title{
-        text-transform: uppercase;
-        display: none;
-    }
-
-    .nav__text, .nav__content-scrollable{
-        display: inline-block;
-    }
-
-    .nav__install{
-        border-color: rgb(31, 31, 31);
-    }
-}
-
 .wrapper{
     height: 100vh;
     display: flex;
@@ -609,6 +558,56 @@ button:not(.banner__btn){
         display: block;
     }
 }
+@media screen and (min-width: 600px){
+
+    .wrapper{
+        padding-left: 270px;
+    }
+    .mright10{
+        margin-right: 10px;
+    }
+
+    .playing__actions button:hover{
+        opacity: 1;
+    }
+
+    .playing__info button:hover{
+        opacity: 1;
+        text-decoration: underline;
+    }
+
+    .nav{
+        width: 250px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .nav li{
+        text-align: left;
+    }
+
+    .nav__logo-small{
+        display: none;
+    }
+
+    .nav__logo{
+        display: block;
+    }
+
+    .nav__title{
+        text-transform: uppercase;
+        display: none;
+    }
+
+    .nav__text, .nav__content-scrollable{
+        display: inline-block;
+    }
+
+    .nav__install{
+        border-color: rgb(31, 31, 31);
+    }
+}
+
 
 @media screen and (min-width: 800px) and (max-width: 1100px){
     .item{
